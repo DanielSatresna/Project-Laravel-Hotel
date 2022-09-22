@@ -1,0 +1,70 @@
+*{
+	background: #1A1A1A;
+	color: #E9AD28;
+}
+.main-content{
+	width: 80%;
+	height: 70%;
+	border-radius: 20px;
+	box-shadow: 0 5px 5px rgba(209, 201, 201, 0.979);
+	margin: 2em ;
+	display: flex;;
+}
+@media screen and (max-width: 640px) {
+	.main-content{width: 90%;}
+	.company__info{
+		display: none;
+	}
+	.login_form{
+		border-top-left-radius:20px;
+		border-bottom-left-radius:20px;
+	}
+}
+@media screen and (min-width: 642px) and (max-width:800px){
+	.main-content{width: 70%;}
+}
+.row > h2{
+	color:#E9AD28;
+}
+.login_form{
+	background-color: #1A1A1A;
+	border-radius: 20px;
+	border-top:1px solid #ccc;
+	border-right:1px solid #ccc;
+}
+form{
+	padding: 0 2em;
+	width: 80%;
+
+}
+.form__input{
+	width: 100%;
+	border:0px solid transparent;
+	border-radius: 0;
+	border-bottom: 1px solid #aaa;
+	padding: .6em .5em ;
+	padding-left: 2em;
+	outline:none;
+	transition: all .5s ease;
+}
+.selectric{
+	width: 100% !important;
+	background:#1A1A1A !important ;
+}
+.form__input:focus{
+	border-bottom-color: #E9AD28;
+	box-shadow: 0 0 5px #E9AD28; 
+	border-radius: 4px;
+}
+.btn{
+	width: 80%;
+	color: #E9AD28 !important;
+	border: 2px solid #E9AD28 !important;
+}
+.btn:hover, .btn:focus{
+	transition:all .6s ease-in;
+	background-color: #E9AD28;
+	color: white !important;
+}
+
+	

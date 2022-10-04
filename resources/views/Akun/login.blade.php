@@ -38,7 +38,7 @@
                 </div>
               </form>
             </div>
-            <div class=" row d-flex justify-content-end regis">
+            <div class=" row d-flex justify-content-end regis pb-3">
               <p>Don't have an account? <a href="/register">Register Here</a></p>
             </div>
           </div>
@@ -46,7 +46,7 @@
       </div>
     </div>
     <!-- Footer -->
-    <div class="container-fluid text-center footer ">
+    <div class="container-fluid text-center footer pb-5 ">
       Coded with &hearts; by <a href="https://bit.ly/yinkaenoch">Yinka.</a></p>
     </div>
   </body>

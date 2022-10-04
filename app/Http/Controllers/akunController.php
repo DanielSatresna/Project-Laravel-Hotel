@@ -38,7 +38,7 @@ class akunController extends Controller
         'role'=> $request->role,
         'tgllhr'=>$request->tgllhr,
     ]);
-    return redirect('/login')->with('sukses', 'Tambah Data SUKSES!!!!');
+    return redirect('/login');
 
     }
 

@@ -20,7 +20,12 @@
                            </div>
                            <div class="header__top__language">
                                <img src="/assets/img/lan.png" alt="">
-                               <span>Hi..{{auth()->user()->name}} </span>
+                               <span>Hi..@if (Auth::check())
+                                {{auth()->user()->name}} 
+                                @else 
+                                Siapa Tuch
+                                @endif
+                            </span>
                                <i class="fa fa-angle-down"></i>
                                <ul>
                                    <li><a href="/profile" class="dropdown-item has-icon">
@@ -51,12 +56,16 @@
                                <ul class="menu__class">
                                    <li class="active"><a href="/">Home</a></li>
                                    <li><a href="/ruangan">Rooms</a></li>  
-                                   <li><a href="/services">Services</a></li>    
+                                   <li><a href="/services">Services</a></li>
+                                   <li>
+                                    @if (Auth::check())
+                                    @if (auth()-> user()->role == 'Resepsionis')
+                                    <a href="/repsepsionis">List</a>
+                                    @endif
+                                    @endif
+                                   </li>    
                                </ul>  
                            </nav>
-                           <div class="header__nav__widget">
-                               <a href="#">Book Now <span class="arrow_right"></span></a>
-                           </div>
                        </div>
                    </div>
                </div>

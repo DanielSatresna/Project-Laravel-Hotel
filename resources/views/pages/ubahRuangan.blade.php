@@ -8,50 +8,49 @@
             <div class="card-header">
                 <h4>Tambah Kamar </h4>
             </div>
-            <form class="card-body" method="POST" action="/tambahkamar">
+            <form class="card-body" method="POST" action="/ubahRuangan/{{$ruangan->id}}">
                 @csrf
-
+                @method('PUT')
                 <div class="form-group row mb-4">
                     <label class="col-form-label text-md-right col-12 col-md-3 col-lg-3">Type Kamar</label>
                     <div class="col-sm-12 col-md-7">
-                        <input type="text" class="form-control inputtags" name="typekamar">
+                        <input type="text" class="form-control inputtags" name="typekamar" value="{{$ruangan->typekamar}}">
                     </div>
-
                 </div>
                 <div class="form-group row mb-4">
                     <label class="col-form-label text-md-right col-12 col-md-3 col-lg-3">Besar Kamar</label>
                     <div class="col-sm-12 col-md-7">
-                        <input type="text" class="form-control inputtags" name="besarkamar">
+                        <input type="text" class="form-control inputtags" name="besarkamar" value="{{$ruangan->besarkamar}}">
                     </div>
 
                 </div>
                 <div class="form-group row mb-4">
-                    <label class="col-form-label text-md-right col-12 col-md-3 col-lg-3">Besar Kasur</label>
+                    <label class="col-form-label text-md-right col-12 col-md-3 col-lg-3">Ukuran Kasur</label>
                     <div class="col-sm-12 col-md-7">
-                        <input type="text" class="form-control inputtags" name="ukurankasur">
+                        <input type="text" class="form-control inputtags" name="ukurankasur" value="{{$ruangan->ukurankasur}}">
                     </div>
 
                 </div>
-                
+                </div>   
 
                 <div class="form-group row mb-4">
                     <label class="col-form-label text-md-right col-12 col-md-3 col-lg-3">Fasilitas Kamar</label>
                     <div class="col-sm-12 col-md-7">
-                        <input type="text" class="form-control inputtags" name="fasilitaskamar">
+                        <input type="text" class="form-control inputtags" name="fasilitaskamar" {{$ruangan->fasilitaskamar}}>
                     </div>
                 </div>
 
                 <div class="form-group row mb-4">
                     <label class="col-form-label text-md-right col-12 col-md-3 col-lg-3">Jumlah Ruangan</label>
                     <div class="col-sm-12 col-md-7">
-                        <input type="number" class="form-control inputtags" min="1" value="1" name="jumlahruangan">
+                        <input type="number" class="form-control inputtags" min="1" value="{{$ruangan->jumlahruangan}}" name="jumlahruangan" >
                     </div>
                 </div>
 
                 <div class="form-group row mb-4">
                     <label class="col-form-label text-md-right col-12 col-md-3 col-lg-3">Upload Image</label>
                     <div class="col-sm-12 col-md-7">
-                        <input type="file" class="form-control inputtags" name="image">
+                        <input type="file" class="form-control inputtags" name="image" {{$ruangan->image}}>
                     </div>
                 </div>
 

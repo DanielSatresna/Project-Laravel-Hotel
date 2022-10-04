@@ -33,24 +33,39 @@ class RoleAccess
                 'ruangan',
                 'services',
                 'profile',
-                'ubahData',
+                'pesanKamar/{id}',
+                'pesanKamarForm/{id}',
+                'buktiPemesanan',
+
             ],
             'Resepsionis' => [
                 '/',
                 'ruangan',
                 'services',
                 'profile',
-                'ubahData'
+                'ubahData',
+                'search',
+                'searchDate',
+                'repsepsionis'
 
             ],
             'Admin' => [
                 '/',
                 'ruangan',
-                'services',
-                'profile',
                 'ubahData',
                 'addKamar',
                 'tambahkamar',
+                'deleteThis/{id}',
+                'tambahService',    
+                'addService',
+                'services',
+                'ubahServiceForm/{id}',
+                'ubahService/{id}',
+                'ubahRuanganForm/{id}',
+                'ubahRuangan/{id}',
+                'repsepsionis',
+                'searchDate',
+              
             ]
         ];
     }
